@@ -1,7 +1,7 @@
-package Services;
+package completo.Services;
 
-import Models.Utente;
-import Repos.UtenteRepository;
+import completo.Models.Utente;
+import completo.Repos.UtenteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
