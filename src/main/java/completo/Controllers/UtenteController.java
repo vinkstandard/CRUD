@@ -1,8 +1,7 @@
-package Controllers;
+package completo.Controllers;
 
-import Models.Utente;
-import Repos.UtenteRepository;
-import Services.UtenteService;
+import completo.Models.Utente;
+import completo.Services.UtenteService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
