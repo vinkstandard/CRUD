@@ -40,4 +40,17 @@ public class UtenteController {
         return utenteService.creaUtente(utente);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Utente> aggiornaUtente(@PathVariable Long id, @RequestBody Utente utente){
+        Utente utenteAggiornato = utenteService.aggiornaUtente(id, utente);
+        if(utenteAggiornato == null) return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(utenteAggiornato);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Utente> cancellaUtente(@PathVariable Long id){
+        utenteService.cancellaUtente(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
