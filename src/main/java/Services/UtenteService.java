@@ -33,4 +33,10 @@ public class UtenteService {
             return null;
         }
     }
+    public Utente creaUtente(Utente utente){
+        return utenteRepository.save(utente);
+    }
+    public void cancellaUtente(Long id){
+        utenteRepository.deleteById(id);
+    }
 }
